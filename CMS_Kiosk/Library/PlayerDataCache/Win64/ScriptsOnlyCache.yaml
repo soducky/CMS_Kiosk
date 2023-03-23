@@ -35,7 +35,6 @@ ScriptsOnlyBuild:
     - Tuesday_Alarm
     - Uduino.UduinoInterface_Bluetooth
     - Uduino.UduinoInterface_Serial
-    - Uduino.UduinoManager
     - Wednesday_Alarm
     - ZoneHiden
     - ZoneNameLoad
@@ -71,11 +70,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
-    Assembly-CSharp:
-    - Uduino.IsActiveDictionnary
-    - Uduino.IsPresentDictionnary
-    - Uduino.UduinoManager/eventBoard
-    - Uduino.UduinoManager/eventValueReceived
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -281,8 +275,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1526}
     - Class: 114
-      Script: {instanceID: 1546}
-    - Class: 114
       Script: {instanceID: 1598}
     - Class: 114
       Script: {instanceID: 1734}
@@ -400,10 +392,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1528}
     - Class: 114
-      Script: {instanceID: 1546}
-    - Class: 114
-      Script: {instanceID: 1598}
-    - Class: 114
       Script: {instanceID: 1734}
     - Class: 114
       Script: {instanceID: 2342}
@@ -518,10 +506,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1526}
     - Class: 114
       Script: {instanceID: 1528}
-    - Class: 114
-      Script: {instanceID: 1546}
-    - Class: 114
-      Script: {instanceID: 1598}
     - Class: 114
       Script: {instanceID: 1734}
     - Class: 114
@@ -709,7 +693,7 @@ ScriptsOnlyBuild:
     className: ReadWrite
   - hash:
       serializedVersion: 2
-      Hash: b1ff362d996d7729b472ff524e469300
+      Hash: 1bedb7a883a07ba1377c460685f652f4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LoadObject
@@ -991,7 +975,7 @@ ScriptsOnlyBuild:
     className: SendLedIntensity
   - hash:
       serializedVersion: 2
-      Hash: 9543879df12cad470805543746e6bc6b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LoadUduino
@@ -1201,7 +1185,7 @@ ScriptsOnlyBuild:
     className: Saturday_Alarm
   - hash:
       serializedVersion: 2
-      Hash: 5c20b8170499c1b20cf14a725a4d4019
+      Hash: 57ee5a439251c162cf1fc6fc9364e46d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LoadStart
@@ -1774,5 +1758,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/SettingScene.unity
-  playerPath: "C:/Users/opem2/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Cms Kiosk Version/CMS
+  playerPath: "C:/Users/opem2/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Cms Kiosk Version_03.23/CMS
     SYSTEM.exe"

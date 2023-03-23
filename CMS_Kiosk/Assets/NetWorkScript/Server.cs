@@ -207,9 +207,10 @@ public class Server : MonoBehaviour
             else if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
             {
                 Invoke("NoKioskAllOffLaterPJ", float.Parse(DataManager.Instance.data.Devel_Time));
-                GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOffCommand();
             }
         }
+
+        GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOffCommand();
     }
 
     public void NoKioskAllOffLaterPJ()
