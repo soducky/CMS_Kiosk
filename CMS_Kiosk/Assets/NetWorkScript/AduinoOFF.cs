@@ -7,12 +7,13 @@ using Unity.VisualScripting;
 
 public class AduinoOFF : MonoBehaviour
 {
-    SerialPort serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+    //  SerialPort serialPort = new SerialPort(DataManager.Instance.data.Devel_COM, 9600, Parity.None, 8, StopBits.One);
+    SerialPort serialPort;
     void Start()
     {
+        serialPort = new SerialPort(DataManager.Instance.data.Devel_COM, 9600, Parity.None, 8, StopBits.One);
         serialPort.Open();
         serialPort.ReadTimeout = 1;
-
     }
 
     private void Update()

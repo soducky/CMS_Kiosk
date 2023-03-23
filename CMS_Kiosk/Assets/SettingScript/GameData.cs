@@ -52,6 +52,7 @@ public class Data // 씬 이동시 데이터 저장할 것들
     public string Devel_IP; // 개발자모드 서버의 IP 입력
     public string Devel_Name; // 개발자모드 서버의 이름 입력
     public string Devel_Time; // 개발자모드 시간 딜레이 입력
+    public string Devel_COM; // 개발자모드 아두이노 COM 입력
 
     public string Open_Hour;
     public string Open_Minute;

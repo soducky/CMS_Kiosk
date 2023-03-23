@@ -1341,7 +1341,7 @@ ScriptsOnlyBuild:
     className: MultipleArduino
   - hash:
       serializedVersion: 2
-      Hash: 8b71691d3930cbc1fb5e7239da8a9b37
+      Hash: 3cb9803ee5b0051cba64f89c82e9b41f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DataManager
@@ -1695,7 +1695,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 7f0cc562ee77cefde1c55d5665cf0240
+      Hash: 199e64cdf5e3edd1dc7cbbc130f58bc1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DeveloperModeEnter
@@ -1758,5 +1758,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/SettingScene.unity
-  playerPath: "C:/Users/opem2/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Cms Kiosk Version_03.23/CMS
-    SYSTEM.exe"
+  playerPath: C:/Users/indigo_002/Desktop/CMS_Kiosk_Ver2/CMS SYSTEM.exe

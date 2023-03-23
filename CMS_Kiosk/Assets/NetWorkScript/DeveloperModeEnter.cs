@@ -20,6 +20,8 @@ public class DeveloperModeEnter : MonoBehaviour // 관리자모드 클래스 - 네트워크 
     public InputField Close_Minute;
     public Dropdown Close_dropdown;
 
+    public InputField Devel_COM;
+
     private void Start()
     {
         LoadPlayerPrefs(); // 저장된 데이터 불러오기 
@@ -38,6 +40,8 @@ public class DeveloperModeEnter : MonoBehaviour // 관리자모드 클래스 - 네트워크 
         Close_Hour.text = PlayerPrefs.GetString("Close_Hour").ToString();
         Close_Minute.text = PlayerPrefs.GetString("Close_Minute").ToString();
         Close_dropdown.value = PlayerPrefs.GetInt("Close_dropdown");
+
+        Devel_COM.text = PlayerPrefs.GetString("Devel_COM").ToString();
     }
 
     public void ReadySave() // 세이브 할때 준비과정 
@@ -54,6 +58,8 @@ public class DeveloperModeEnter : MonoBehaviour // 관리자모드 클래스 - 네트워크 
         PlayerPrefs.DeleteKey("Close_Minute");
         PlayerPrefs.DeleteKey("Close_dropdown");
 
+        PlayerPrefs.DeleteKey("Devel_COM");
+
         PlayerPrefs.SetString("Devel_IP", Devel_IP.text); // 인풋필드의 값을 PlayerPrefs 키에 저장 
         PlayerPrefs.SetInt("Devel_Port", int.Parse(Devel_Port.text));
         PlayerPrefs.SetString("Devel_Name", Devel_Name.text);
@@ -65,6 +71,8 @@ public class DeveloperModeEnter : MonoBehaviour // 관리자모드 클래스 - 네트워크 
         PlayerPrefs.SetString("Close_Hour", Close_Hour.text);
         PlayerPrefs.SetString("Close_Minute", Close_Minute.text);
         PlayerPrefs.SetInt("Close_dropdown", Close_dropdown.value);
+
+        PlayerPrefs.SetString("Devel_COM", Devel_COM.text);
     }
 
     public void DBSave()
@@ -80,6 +88,8 @@ public class DeveloperModeEnter : MonoBehaviour // 관리자모드 클래스 - 네트워크 
         DataManager.Instance.data.Close_Hour = PlayerPrefs.GetString("Close_Hour").ToString();
         DataManager.Instance.data.Close_Minute = PlayerPrefs.GetString("Close_Minute").ToString();
         DataManager.Instance.data.Close_DropDown = PlayerPrefs.GetInt("Close_dropdown");
+
+        DataManager.Instance.data.Devel_COM = PlayerPrefs.GetString("Devel_COM").ToString();
     }
 
     public void EnterDeveloperBtn() // 관리자 모드 들어가는 버튼 클릭
