@@ -343,9 +343,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7642}
     - Class: 114
-      Script: {instanceID: 7778}
+      Script: {instanceID: 7780}
     - Class: 114
-      Script: {instanceID: 8006}
+      Script: {instanceID: 8008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -454,9 +454,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7634}
     - Class: 114
-      Script: {instanceID: 8138}
+      Script: {instanceID: 8140}
     - Class: 114
-      Script: {instanceID: 8304}
+      Script: {instanceID: 8306}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1758,4 +1758,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/SettingScene.unity
-  playerPath: C:/Users/indigo_002/Desktop/CMS_Kiosk_Ver2/CMS SYSTEM.exe
+  playerPath: "C:/Users/opem2/OneDrive/\uBC14\uD0D5 \uD654\uBA74/cms_System 23.03.24/CMS
+    SYSTEM.exe"

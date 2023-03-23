@@ -175,31 +175,63 @@ public class Client : MonoBehaviour
 
     public void NoKioskAllOn()
     {
-        GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOnCommand();
-
-        for (h = 4; h < DataManager.Instance.data.i; h++)
+        try
         {
-            if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
+            GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOnCommand();
+
+            for (h = 4; h < DataManager.Instance.data.i; h++)
             {
-                _hostName = DataManager.Instance.data.IPAddress[h];
-                _port = int.Parse(DataManager.Instance.data.Port[h]);
-
-                if (_port == 4352)
+                if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
                 {
-                    PjlinkClient2 PJ = new PjlinkClient2(_hostName, _port, 2000);
-                    PJ.PowerOn();
+                    _hostName = DataManager.Instance.data.IPAddress[h];
+                    _port = int.Parse(DataManager.Instance.data.Port[h]);
 
-                    if (PJ.value == 1)
+                    if (_port == 4352)
                     {
-                        DataManager.Instance.data.ImageLight[h] = true;
-                        DataManager.Instance.data.ZoneLight[h] = true;
+                        PjlinkClient2 PJ = new PjlinkClient2(_hostName, _port, 2000);
+                        PJ.PowerOn();
+
+                        if (PJ.value == 1)
+                        {
+                            DataManager.Instance.data.ImageLight[h] = true;
+                            DataManager.Instance.data.ZoneLight[h] = true;
+                        }
                     }
                 }
-            }
 
-            else if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
+                else if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    Invoke("NoKioskAllOnLaterPC", float.Parse(DataManager.Instance.data.Devel_Time));
+                }
+            }
+        }
+        catch
+        {
+
+            for (h = 4; h < DataManager.Instance.data.i; h++)
             {
-                Invoke("NoKioskAllOnLaterPC", float.Parse(DataManager.Instance.data.Devel_Time));
+                if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    _hostName = DataManager.Instance.data.IPAddress[h];
+                    _port = int.Parse(DataManager.Instance.data.Port[h]);
+
+                    if (_port == 4352)
+                    {
+                        PjlinkClient2 PJ = new PjlinkClient2(_hostName, _port, 2000);
+                        PJ.PowerOn();
+
+                        if (PJ.value == 1)
+                        {
+                            DataManager.Instance.data.ImageLight[h] = true;
+                            DataManager.Instance.data.ZoneLight[h] = true;
+                        }
+                    }
+                }
+
+                else if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    Invoke("NoKioskAllOnLaterPC", float.Parse(DataManager.Instance.data.Devel_Time));
+                }
             }
         }
     }

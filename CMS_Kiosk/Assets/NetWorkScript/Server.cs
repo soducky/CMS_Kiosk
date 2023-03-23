@@ -197,19 +197,39 @@ public class Server : MonoBehaviour
 
     public void NoKioskAllOff()
     {
-        GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOffCommand();
-
-        for (h = 4; h < DataManager.Instance.data.i; h++)
+        try
         {
-            if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
-            {
-                string mes = DataManager.Instance.data.IPAddress[h];
-                OffPC(mes);
-            }
+            GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOffCommand();
 
-            else if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
+            for (h = 4; h < DataManager.Instance.data.i; h++)
             {
-                Invoke("NoKioskAllOffLaterPJ", float.Parse(DataManager.Instance.data.Devel_Time));
+                if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    string mes = DataManager.Instance.data.IPAddress[h];
+                    OffPC(mes);
+                }
+
+                else if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    Invoke("NoKioskAllOffLaterPJ", float.Parse(DataManager.Instance.data.Devel_Time));
+                }
+            }
+        }
+
+        catch
+        {
+            for (h = 4; h < DataManager.Instance.data.i; h++)
+            {
+                if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    string mes = DataManager.Instance.data.IPAddress[h];
+                    OffPC(mes);
+                }
+
+                else if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
+                {
+                    Invoke("NoKioskAllOffLaterPJ", float.Parse(DataManager.Instance.data.Devel_Time));
+                }
             }
         }
     }
