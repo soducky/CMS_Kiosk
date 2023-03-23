@@ -164,6 +164,7 @@ public class Server : MonoBehaviour
             {
                 string mes = DataManager.Instance.data.IPAddress[h];
                 OffPC(mes);
+             //   DataManager.Instance.data.ImageLight[h] = false;
             }
 
             else if (DataManager.Instance.data.modeSelect[h] == false && DataManager.Instance.data.IPAddress[h] != "0")
@@ -196,6 +197,8 @@ public class Server : MonoBehaviour
 
     public void NoKioskAllOff()
     {
+        GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOffCommand();
+
         for (h = 4; h < DataManager.Instance.data.i; h++)
         {
             if (DataManager.Instance.data.modeSelect[h] == true && DataManager.Instance.data.IPAddress[h] != "0")
@@ -209,8 +212,6 @@ public class Server : MonoBehaviour
                 Invoke("NoKioskAllOffLaterPJ", float.Parse(DataManager.Instance.data.Devel_Time));
             }
         }
-
-        GameObject.FindGameObjectWithTag("Server").GetComponent<AduinoOFF>().ArduinoOffCommand();
     }
 
     public void NoKioskAllOffLaterPJ()
