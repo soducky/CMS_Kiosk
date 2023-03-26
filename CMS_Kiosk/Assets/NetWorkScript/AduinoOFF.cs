@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 public class AduinoOFF : MonoBehaviour
 {
-    SerialPort serialPort = new SerialPort(DataManager.Instance.data.Devel_COM, 9600, Parity.None, 8, StopBits.One);
+    SerialPort serialPort = new SerialPort("COM"+DataManager.Instance.data.Devel_COM, 9600, Parity.None, 8, StopBits.One);
 
     void Start()
     {

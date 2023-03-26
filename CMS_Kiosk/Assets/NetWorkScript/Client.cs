@@ -88,7 +88,18 @@ public class Client : MonoBehaviour
                 DataManager.Instance.data.ZoneLight[k] = true;
             }
         }
- 
+
+        if(data == "192.168.5.241")
+        {
+            DataManager.Instance.data.ImageLight[16] = true;
+            DataManager.Instance.data.ZoneLight[16] = true;
+        }
+
+        if (data == "192.168.5.240")
+        {
+            DataManager.Instance.data.ImageLight[16] = false;
+            DataManager.Instance.data.ZoneLight[16] = false;
+        }
     }
 
     void Send(string data)
